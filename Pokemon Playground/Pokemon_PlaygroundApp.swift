@@ -13,7 +13,7 @@ struct Pokemon_PlaygroundApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: PokemonPagerViewModel(repository: PokemonRepositoryImpl()))
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
